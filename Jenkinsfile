@@ -5,8 +5,10 @@ pipeline {
     agent { dockerfile true }
     
     stages {
-        steps {
-            echo "Success build!"
+        stage('Building...') {
+            steps {
+                echo "Success build!"
+            }
         }
     }
 }
