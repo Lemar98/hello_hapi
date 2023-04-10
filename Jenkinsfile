@@ -4,8 +4,6 @@ pipeline {
 
     agent {
         docker {
-            #image 'node'
-            #args '-u root'
             dockerfile true
         }
     }
@@ -18,11 +16,5 @@ pipeline {
                 sh 'docker compose up --build'
             }
         }
-        #stage('Test') {
-        #    steps {
-        #        echo 'Testing...'
-        #        sh 'npm test'
-        #    }
-        #}
     }
 }
