@@ -1,13 +1,25 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    
-    agent { dockerfile true }
-    
+
+    agent {
+        docker {
+            image 'node'
+            args '-u root'
+        }
+    }
+
     stages {
-        stage('Building...') {
+        stage('Build') {
             steps {
-                echo "Success build!"
+                echo 'Building...'
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'npm test'
             }
         }
     }
