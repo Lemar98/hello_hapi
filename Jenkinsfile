@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-//trsd
+//trs
     agent {
         docker {
             image 'node'
