@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-//trs'''oi
+//trs'''oif
     agent {
         docker {
             image 'node'
