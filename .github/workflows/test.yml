@@ -1,8 +1,11 @@
 name: Test Workflow
+
 on:
   push:
     branches:
       - test
+
+workflow_dispatch:
 
 jobs:
   job1:
