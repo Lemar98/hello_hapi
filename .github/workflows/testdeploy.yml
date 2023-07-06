@@ -15,4 +15,4 @@ jobs:
     needs: checkout
     steps:
       - name: docker up
-        run: docker build -t my-node-app .
+        run: docker run -p 3000:3000 my-node-app
