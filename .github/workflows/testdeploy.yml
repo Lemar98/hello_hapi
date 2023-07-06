@@ -15,4 +15,4 @@ jobs:
     needs: checkout
     steps:
       - name: docker up
-        run: docker compose up -d --build
+        run: docker build -t my-node-app .
