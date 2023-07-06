@@ -1,1 +1,12 @@
+name: Test deploy on SarahConnor
 
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  test:
+    runs-on: debian-latest
+    steps:
+      - name: eto test
+        uses: actions/checkout@v3
