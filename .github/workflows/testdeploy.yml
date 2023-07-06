@@ -5,13 +5,14 @@ on:
     branches: [ "master" ]
 
 jobs:
-  chekout:
+  checkout:
     runs-on: self-hosted
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
   wakeup:
     runs-on: self-hosted
+    needs: checkout
     steps:
       - name: docker up
-        run: ls -la
+        run: docker compose up -d --build
