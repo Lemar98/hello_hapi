@@ -10,3 +10,5 @@ jobs:
     steps:
       - name: eto test
         uses: actions/checkout@v3
+      - name: eto outln
+        run: ls -la
